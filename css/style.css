@@ -70,10 +70,9 @@ header {
 }
 
 .filter {
-	min-height: 750px;
-	background: linear-gradient(143deg, #1de9b6, #0bb1c9 90%) center no-repeat;
+	background: linear-gradient(143deg, rgba(29, 233, 182, 0.9), rgba(11, 177, 201, 0.9)) center no-repeat;
 	background-size: cover;
-	opacity: 0.9;
+	height: 100%;
 }
 
 .logo {
@@ -320,6 +319,7 @@ nav {
 
 .services {
 	display: grid;
+	grid-template-rows: repeat(14, 1fr);
 }
 
 .services-block {
@@ -340,7 +340,7 @@ nav {
 	grid-row: 1;
 }
 
-.service-block-item h6 {
+.service-block-item > h6 {
 	grid-column: 1;
 	font-family: Raleway;
 	font-size: 15px;
@@ -352,149 +352,115 @@ nav {
 	text-transform: uppercase;
 }
 
-.service-block-item i:nth-child(1) {
+.service-block-item > i:nth-child(1) {
 	grid-column: 1;
 	font-size: 15px;
 }
 
-.service-block-item i:nth-child(3) {
+.service-block-item > i:nth-child(3) {
 	margin-left: auto;
 }
 
+/* Our Customers */
 
-/*
-.services {
-	text-align: center;
-	line-height: 75%
+.customers-wrapper {
+	min-height: 564px;
+	background: url(../img/customers-background.png) no-repeat center;
+	background-size: cover;
 }
-.services h3 {
+
+.customers-content {
+	min-height: 564px;
+	grid-template-rows: repeat(9, 1fr);
+}
+
+.customers-title {
+	grid-row: 3/9;
+	grid-column: 2/8;
+}
+
+.customers-title > h3 {
 	font-family: Raleway;
 	font-size: 45px;
 	font-weight: 600;
-	color: #061e37;
+	color: #fff;
 }
-.services p {
+
+.customers-title > p {
 	font-size: 15px;
 	font-height: 25px;
 	font-family: Raleway;
+	margin-top: 5px;
 	font-weight: 400;
-	color: #b0bec5;
-	line-height: 100%;
+	color: #fff;
 }
-.boxservice {
-	display: flex;
-	flex-direction: column;
-	margin-top: 52px;
-	width: 800px;
-	margin-left:auto;
-	margin-right: auto;
-}
-.statbox {
-	height: 240px;
-	width: 800px;
-	background: white;
+
+.customers-title > a {
+	display: block;
+	margin-top: 50px;
+	text-align: center;
 	border-radius: 5px;
-
+  background-color: rgba(6, 30, 55, 1);
+	width: 150px;
+	line-height: 3.5em;
+  height: 55px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 700;
 }
-.instatbox {
-	width: 800px;
-	margin-top: 25px;
-	display: inline-flex;
+
+.arrow-wrap {
+	display: block;
+	grid-column: 10/20;
+}
+
+.arrow_up {
+	align-self: center;
+}
+
+.arrow-wrap > i {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	max-width: 560px;
+	padding-left: 76px;
+	font-size: 45px;
+	color: #fff;
+}
+
+.arrow_up {
+	t
+}
+
+.customers-comments {
+	grid-column: 10/20;
+	grid-row: 2/9;
+	display: grid;
+}
+
+
+.report {
+	display: grid;
+	max-width: 650px;
+	margin-left: auto;
+	height: 160px;
 	align-items: center;
-	// контейнер статистики //
 }
-.trendingup {
-	padding-left: 28px;
-	display: inline-block;
-}
-.statbox a {
-	font-family: Raleway;
-	font-size: 15px;
-	text-decoration: none;
-	color: #061e37;
-	font-weight: 700;
-	padding-left: 28px;
-	display: inline-block;
-	text-transform: uppercase;
-	// надпись //
-}
-.instatbox i {
-	border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-flex;
-    margin-left: auto;
-	margin-right: 28px;
-    padding: 3px;
-    // стрелка //
 
-}
-.arrowdown {
-	transform: rotate(45deg);
-  	-webkit-transform: rotate(45deg);
-}
-.instatbox2 {
-	display: inline-flex;
-	width: 748px;
-	margin: 26px;
-	margin-top: 20px;
-	justify-content: space-between;
-}
-.organaizer {
-	display: inline-flex;
-}
-.stattext {
-	display: inline-flex;
-	align-items: center;
-	font-family: Raleway;
-	font-size: 15px;
-	font-height: 25;
-	font-weight: 400;
-	color: #061e37;
-}
-.otherboxes {
-	margin-top: 11px;
-	height: 262px;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
+	.report > img {
+	grid-row: 1;
+	}
 
-}
-.otherboxallfun {
-	background: white;
+.report-text {
+	grid-row: 1;
+	background: rgba(255, 255, 255, 1);
 	border-radius: 5px;
-	box-shadow: 0 0 5px rgba(0,0,0,.2);
-	align-items: center;
-	display: inline-flex;
-	width: 800px;
-	height: 48px;
-	align-content: space-around;
-
-}
-.otherboxes a {
-	font-family: Raleway;
-	font-size: 15px;
-	text-decoration: none;
-	color: #061e37;
-	font-weight: 700;
-	padding-left:33px;
-	text-transform: uppercase;
-	display: inline-flex;
-	margin-right: auto;
-}
-.otherboxallfun img {
-	display: inline-flex;
-	padding-left: 28px;
-	vertical-align: middle;
-
-}
-.otherboxallfun i {
-	border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-flex;
-    margin-left: auto;
-    margin-right: 28px;
-    padding: 3px;
-}
+	padding: 30px;
+	}
+/*
 .commentbox {
 	display: flex;
 	margin-top: 100px;
