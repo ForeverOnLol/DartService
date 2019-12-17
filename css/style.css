@@ -431,16 +431,11 @@ nav {
 	color: #fff;
 }
 
-.arrow_up {
-	t
-}
-
 .customers-comments {
 	grid-column: 10/20;
 	grid-row: 2/9;
 	display: grid;
 }
-
 
 .report {
 	display: grid;
@@ -460,6 +455,76 @@ nav {
 	border-radius: 5px;
 	padding: 30px;
 	}
+
+.report-text h5 {
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: 700;
+	color: #061e37;
+}
+
+.report-text p {
+	margin-top: 10px;
+	font-family: Raleway;
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 400;
+	color: #78909c;
+}
+
+/* Our Team */
+
+.team {
+	grid-template-rows: repeat(15, 1fr);
+}
+
+.crew {
+	grid-column: 6/16;
+	grid-row: 6/16;
+	text-align: center;
+}
+
+.crew img {
+	grid-row: 1;
+	align-self: center;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 50%;
+}
+
+#selected-photo {
+	border-radius: 50%;
+	border: 20px solid #fff;
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.crew > h5 {
+	margin-top: 27px;
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: 700;
+	color: #061e37;
+}
+
+.crew > p {
+	margin-top: 20px;
+	font-family: Raleway;
+	font-size: 15px;
+	font-weight: 600px;
+	color: #b0bec5;
+}
+
+.crew-links {
+		margin-top: 27px;
+
+}
+.crew-links a{
+	font-size: 20px;
+	color: #90a4ae;
+	list-style-type: none;
+	text-decoration: none;
+	margin-left: 10px;
+}
 /*
 .commentbox {
 	display: flex;
@@ -545,20 +610,10 @@ nav {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
  }
 .username {
-	font-family: Raleway;
-	font-size: 18px;
-	font-weight: 700;
-	margin-top: 30px;
-	margin-left: 30px;
-	color: #061e37;
+
 }
 .usercomment {
-	margin-left: 30px;
-	margin-top: 20px;
-	font-family: Raleway;
-	font-weight: 400;
-	font-size: 15px;
-	color: #78909c;
+
 }
 .comment2 {
 
