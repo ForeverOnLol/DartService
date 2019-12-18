@@ -101,8 +101,9 @@ header {
 /* Navigation */
 
 header nav {
-	grid-column: 9/16;
+	grid-column: 7/16;
 	grid-row: 1/3;
+	justify-self: flex-end;
 }
 
 .menu {
@@ -123,7 +124,7 @@ header nav {
 	text-decoration: none;
 }
 .button-signup {
-	grid-column: 19/20;
+	grid-column: 18/20;
 	grid-row: 1/3;
 	border: 1px solid white;
 	background-color: Transparent;
@@ -132,9 +133,12 @@ header nav {
   font-size: 15px;
 	font-family: Raleway;
 	font-weight: Regular;
+	justify-self: flex-end;
   overflow: hidden;
   text-decoration: none;
 	text-align: center;
+	width: 80px;
+	height: 25px;
 }
 
 /* Product + video */
@@ -190,14 +194,14 @@ header nav {
 
 .player {
 	grid-column: 12/20;
-	grid-row: 4/10;
+	grid-row: 4/8;
+	text-align: right
 }
 
 .player > iframe {
-	display: block;
-	max-width: 500px;
+	max-width: 600px;
+	width: 100%;
 	height: 300px;
-	margin-left: auto;
 	border-radius: 5px;
 	border: 1px solid #000;
 }
@@ -727,3 +731,67 @@ footer nav {
 	color: #7f858d;
 	opacity: 0.8;
 }
+
+
+/* MEDIA */
+
+@media screen and (max-width: 999px)  {
+
+	header nav {
+		grid-column: 1/16;
+		grid-row: 2/4;
+	}
+
+	.menu > li a {
+		font-size: 20px;
+	}
+
+	.preview {
+		grid-column: 2/20;
+		grid-row: 5/11;
+	}
+
+	.preview h1 , .preview p {
+		display: block;
+		width: 600px;
+	}
+
+	.player {
+		display: none;
+	}
+
+	.easyuseful-block img {
+		display: none;
+	}
+
+	.contact-us-title {
+		margin-top: 0px;
+		padding: 0px;
+	}
+
+	.contact-us-form {
+		grid-column: 1/21;
+		width: 660px;
+		justify-self: center;
+		align-self: center;
+		margin-top: 10px;
+		grid-gap: 20px 0;
+	}
+
+	.contact-us-form input {
+	}
+
+	.contact-us-form > textarea {
+		margin-top: 0px;
+	}
+
+	.contact-us-form button {
+		justify-self: center;
+	}
+
+
+}
+
+	@media screen and (max-width: 768px) {
+
+	}
