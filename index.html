@@ -24,7 +24,7 @@
           <img src="img/Shap1.png">
           <a href="#">dart<br><b>service manager</b></a>
         </div>
-        <nav class="grid-elem-center">
+        <nav class="grid-elem-center" id="sidebar">
           <ul class="menu">
             <li>
               <a href="#">Home</a>
@@ -41,9 +41,19 @@
             <li>
               <a href="#">Help</a>
             </li>
+            <li>
+              <a href="#" class="sidebarelem-replace">Sign Up</a>
+            </li>
+              <li>
+                <a href="#" class="sidebarelem-replace">Privecy Policy</a>
+              </li>
           </ul>
         </nav>
-        <a href="#" class="button-signup grid-elem-center">sign up</a>
+        <a href="#" class="button-signup grid-elem-center" id="sidebar">sign up</a>
+        <div class="hamburger" onclick="toggleNav()">
+          <a id="reoder"><i class="material-icons reoder">reorder</i></a>
+          <a id="clear"><i class="material-icons clear">clear</i></a>
+        </div>
         <div class="preview">
           <h1>lorem Ipsum Dolor sit amet</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc </p>
@@ -233,5 +243,12 @@
       <a href="#"><i class="icofont-behance"></i></a>
     </div>
   </footer>
+  <script type="text/javascript">
+				function toggleNav() {
+					document.getElementById('sidebar').classList.toggle('active');
+          document.getElementById('clear').classList.toggle('active-icon');
+          document.getElementById('reoder').classList.toggle('hidden-icon');
+				}
+			</script>
 	</body>
 	</html>
