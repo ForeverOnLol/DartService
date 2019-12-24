@@ -147,9 +147,9 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna</br></p>
           <a href="#">get started</a>
         </div>
-        <div class="arrow-wrap arrow_up"><i class="material-icons">keyboard_arrow_up</i></div>
-        <div class="arrow-wrap arrow_down"><i class="material-icons">keyboard_arrow_down</i></div>
-        <div class="customers-comments">
+        <div class="arrow-wrap arrow_up"><i onclick="plusSlide(+1)" class="material-icons">keyboard_arrow_up</i></div>
+        <div class="arrow-wrap arrow_down"><i onclick="plusSlide(-1)" class="material-icons">keyboard_arrow_down</i></div>
+        <div class="customers-comments fade" id="customers-comments-slide">
           <div class="report">
             <img src="img/JohnD.png" alt="man">
             <div class="report-text">
@@ -158,9 +158,41 @@
             </div>
           </div>
           <div class="report">
-            <img src="img/Khalessi.png" alt="man">
+            <img src="img/Khalessi.png" alt="woman">
             <div class="report-text">
               <h5>Khalessi</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+          </div>
+        </div>
+        <div class="customers-comments fade"  id="customers-comments-slide">
+          <div class="report">
+            <img src="img/person5.png" alt="woman">
+            <div class="report-text">
+              <h5>Mia Wong</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+          </div>
+          <div class="report">
+            <img src="img/person6.png" alt="man">
+            <div class="report-text">
+              <h5>Harrison Ford</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+          </div>
+        </div>
+        <div class="customers-comments fade"  id="customers-comments-slide">
+          <div class="report">
+            <img src="img/person2.png" alt="man">
+            <div class="report-text">
+              <h5>John Stone</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+            </div>
+          </div>
+          <div class="report">
+            <img src="img/person3.png" alt="man">
+            <div class="report-text">
+              <h5>Salome Simoes</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
             </div>
           </div>
@@ -175,11 +207,15 @@
     </div>
     <div class="crew">
       <div class="crew-photos grid">
-        <img src="img/girl.png" alt="girl">
-        <img id="selected-photo"src="img/Sophie1.png" alt="Sophie Turner">
-        <img src="img/boy.png" alt="boy">
+        <img class="crew-img team_woman" src="img/team_woman.png" onclick="reposition(this)" alt="woman">
+        <img class="crew-img sophie-turner" id="selected-photo"src="img/Sophie1.png" onclick="reposition(this)" alt="Sophie Turner">
+        <img class="crew-img team_man" src="img/team_man.png" onclick="reposition(this)" alt="man">
       </div>
-      <h5>Sophie Turner</h5>
+      <h5 class="team_woman">Natalie Lee-Walsh</h5>
+      <h5 class="sophie-turner">Sophie Turner</h5>
+      <h5 class="">Sophie Turner</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+      <p class="sophie-turner">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
       <div class="crew-links">
         <a href=""><i class="icofont-twitter"></i></a>
@@ -250,5 +286,7 @@
           document.getElementById('reoder').classList.toggle('hidden-icon');
 				}
 			</script>
+      <script type=text/javascript src="js/customers-slider.js"></script>
+      <<script type="text/javascript" src="js/our-team-slider.js"></script>
 	</body>
 	</html>

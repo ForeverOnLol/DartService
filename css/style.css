@@ -399,6 +399,7 @@ header nav {
 .customers-content {
 	min-height: 564px;
 	grid-template-rows: repeat(9, 1fr);
+	overflow: hidden;
 }
 
 .customers-title {
@@ -448,9 +449,10 @@ header nav {
 	align-self: center;
 }
 
-.arrow-wrap > i {
+.arrow-wrap  i {
 	display: block;
 	text-align: center;
+	cursor: pointer;
 	margin-left: auto;
 	max-width: 560px;
 	padding-left: 76px;
@@ -458,10 +460,15 @@ header nav {
 	color: #fff;
 }
 
+.arrow-wrap i:hover {
+	cursor: pointer;
+}
+
 .customers-comments {
 	grid-column: 10/20;
 	grid-row: 2/9;
 	display: grid;
+	position: relative;
 }
 
 .report {
@@ -473,6 +480,9 @@ header nav {
 
 	.report > img {
 	grid-row: 1;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
 	}
 
 .report-text {
@@ -498,6 +508,23 @@ header nav {
 	color: #78909c;
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* Our Team */
 
 .team {
@@ -516,12 +543,16 @@ header nav {
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 50%;
+	width: 100px;
 }
 
 #selected-photo {
 	border-radius: 50%;
 	border: 20px solid #fff;
 	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	grid-column: 2;
+	width: 160px;
+	height: 160px;
 }
 
 .crew > h5 {
@@ -530,6 +561,7 @@ header nav {
 	font-size: 18px;
 	font-weight: 700;
 	color: #061e37;
+	display: none;
 }
 
 .crew > p {
@@ -538,6 +570,7 @@ header nav {
 	font-size: 15px;
 	font-weight: 600px;
 	color: #b0bec5;
+	display: none;
 }
 
 .crew-links {
@@ -814,7 +847,6 @@ footer nav {
 		padding: 0 30px;
 		margin-left: auto;
 		margin-right: auto;
-		display: block;
 		max-width: 372px;
 	}
 
@@ -863,6 +895,7 @@ footer nav {
 			background: #061e37;
 			transform: translateX(-100%);
 			transition: all 250ms linear;
+			z-index: 100;
 		}
 
 		#sidebar li {
@@ -891,6 +924,7 @@ footer nav {
 			top: 5%;
 			right: 1%;
 			cursor: pointer;
+			z-index: 100;
 		}
 
 		.hamburger i {
